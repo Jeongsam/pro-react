@@ -22,8 +22,10 @@
   },
   "homepage": "https://github.com/Jeongsam/kanban-app#readme",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "marked": "^0.4.0",
     "react": "^16.4.1",
+    "react-addons-update": "^15.6.2",
     "react-dom": "^16.4.1"
   },
   "devDependencies": {
