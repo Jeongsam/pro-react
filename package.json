@@ -1,0 +1,36 @@
+{
+  "name": "kanban-app",
+  "version": "1.0.0",
+  "description": "Example codes of 'Pro React'\r ============================\r This codes are exercising according to the Pro-React's codes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/webpack-dev-server --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeongsam/kanban-app.git"
+  },
+  "keywords": [
+    "Pro React",
+    "KanbanBoard"
+  ],
+  "author": "JEONG SEUNG YONG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jeongsam/kanban-app/issues"
+  },
+  "homepage": "https://github.com/Jeongsam/kanban-app#readme",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  }
+}
