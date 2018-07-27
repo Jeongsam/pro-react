@@ -1,6 +1,6 @@
 {
   "name": "kanban-app",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Example codes of 'Pro React'\r ============================\r This codes are exercising according to the Pro-React's codes.",
   "main": "index.js",
   "scripts": {
