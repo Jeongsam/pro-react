@@ -7,10 +7,7 @@ class List extends Component {
         let cards = this.props.cards.map((card) => {
             return <Card key={card.id}
                         taskCallbacks={this.props.taskCallbacks}
-                        title={card.title}
-                        description={card.description}
-                        color={card.color}
-                        tasks={card.tasks} />
+                        {...card} />
         });
 
         return (

@@ -24,7 +24,7 @@ class Card extends Component {
     }
 
     toggleDetails() {
-        this.setState({showDetails: !this.state.showDetails});
+        this.setState({ showDetails: !this.state.showDetails });
     }
 
     render() {
@@ -32,7 +32,7 @@ class Card extends Component {
 
         if (this.state.showDetails) {
             cardDetails = (
-                <div className="cart_details">
+                <div className="card__details">
                     {/* {marked(this.props.description)} */}
                     <span dangerouslySetInnerHTML={{__html:marked(this.props.description)}} />
                     <CheckList cardId={this.props.id} 
@@ -55,7 +55,9 @@ class Card extends Component {
         return (
              <div className="card">
                 <div style={sideColor} />
-                <div className="card__title" onClick={this.toggleDetails.bind(this)}>
+                <div className={
+                    this.state.showDetails ? "card__title card__title--is-open" : "card__title"
+                } onClick={this.toggleDetails.bind(this)}>
                     {this.props.title}
                 </div>
                 {cardDetails}

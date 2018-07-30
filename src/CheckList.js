@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import 'babel-polyfill';
 
 class CheckList extends Component {
     checkInputKeyPress(evt) {
-        if (evt === 'Enter') {
+        if (evt.key === 'Enter') {
             this.props.taskCallbacks.add(this.props.cardId, evt.target.value);
+            evt.target.value = '';
         }
     }
 
     render() {
-        let tasks = this.props.tasks.map((task) => (
+        let tasks = this.props.tasks.map((task, taskIndex) => (
             <li key={task.id} className="checklist__task">
                 <input type="checkbox" checked={task.done} onChange={
                     this.props.taskCallbacks.toggle.bind(null, this.props.cardId,
-                    task.id, this.props.taskIndex)
+                    task.id, taskIndex)
                 } />
                 {task.name}{' '}
                 <a href="#" className="checklist__task--remove" onClick={
                     this.props.taskCallbacks.delete.bind(null, this.props.cardId,
-                    task.id, this.props.taskIndex)
+                    task.id, taskIndex)
                 } />
             </li>
         ));
@@ -39,7 +39,7 @@ class CheckList extends Component {
 CheckList.propTypes = {
     cardId: PropTypes.number,
     taskCallbacks: PropTypes.object,
-    tasks: PropTypes.array
+    tasks: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default CheckList;
